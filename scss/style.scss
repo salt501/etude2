@@ -1,0 +1,457 @@
+@charset "utf-8";
+
+@import "./color";
+@import "./mixin";
+
+section {
+  padding-bottom: 120px;
+  background-color: $gray;
+
+  @include iphone {
+    padding-bottom: 80px;
+  }
+}
+
+a {
+  font-size: 14px;
+  text-decoration: none;
+  color: $black;
+}
+
+p {
+  font-size: 14px;
+
+  @include iphone {
+    font-size: 18px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  max-height: 80px;
+  background-color: $gray;
+
+  @include iphone {
+    padding: 20px 0;
+  }
+
+  .header-wrapper {
+    display: flex;
+    gap: 8%;
+    margin-left: 15%;
+    align-items: center;
+
+    @include iphone {
+      flex-wrap: wrap;
+      gap: 100%;
+      margin-left: 5%;
+    }
+
+    .logo {
+      width: 15%;
+
+      @include iphone {
+        width: 20%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 15%;
+
+      @include iphone {
+        margin-top: 10px;
+        gap: 10%;
+      }
+    }
+  }
+
+  .contact {
+    background-color: $black;
+    width: 11%;
+    text-align: center;
+
+    a {
+      vertical-align: center;
+      font-size: 12px;
+      color: $white;
+      line-height: 80px;
+    }
+
+    @include iphone {
+      display: none;
+    }
+  }
+}
+
+.top {
+  img {
+    width: 100%;
+    height: 1009px;
+    object-fit: none;
+  }
+}
+
+.font2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 100;
+  letter-spacing: 15px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+
+  @include iphone {
+    font-size: 40px;
+  }
+
+  span {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0;
+    padding-top: 10px;
+
+    @include iphone {
+      font-size: 18px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $black;
+    height: 1px;
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+
+    @include iphone {
+      height: 2px;
+    }
+  }
+}
+
+// news
+.news {
+  &-wrapper {
+    width: 50%;
+    margin: 0 auto;
+
+    @include iphone {
+      width: 90%;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include iphone {
+      display: block;
+    }
+  }
+
+  &-container {
+    margin-left: 30px;
+    padding-left: 30px;
+    border-left: 1px solid $black;
+
+    @include iphone {
+      padding: 0 0 40px 0;
+      margin: 0;
+      border: unset;
+    }
+
+    &:nth-of-type(1) {
+      margin: 0;
+      padding-left: 0;
+      border: unset;
+    }
+
+    p {
+      span {
+        background-color: $black;
+        font-size: 12px;
+        color: $white;
+        padding: 3px 8px;
+        margin-left: 15px;
+      }
+    }
+
+    .font6 {
+      font-size: 14px;
+      font-weight: 100;
+      margin-top: 30px;
+
+      @include iphone {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+// about
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @include iphone {
+    display: block;
+  }
+
+  &-wrapper {
+    margin: 0 auto;
+    padding-top: 200px;
+
+    @include iphone {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+  &-img {
+    width: 50%;
+
+    @include iphone{
+      width: 30%;
+      margin-bottom: 50px;
+    }
+
+    img {
+      width: 100%;
+      
+      @include iphone {
+
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-txt {
+    width: 95%;
+
+    p {
+      line-height: 2.5;
+
+      @include iphone {
+        line-height: 2;
+      }
+    }
+  }
+}
+
+// business
+.business {
+  &-wrapper {
+    width: 50%;
+    margin: 0 auto;
+
+    @include iphone {
+      width: 90%;
+    }
+  }
+
+
+  &-inner {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+
+    @include iphone {
+      display: block;
+    }
+  }
+
+
+  &-container {
+    width: 30%;
+
+    @include iphone {
+      width: 100%;
+    }
+
+
+    &:nth-of-type(1) {
+      padding-top: 120px;
+
+      @include iphone {
+        padding: 0;
+      }
+    }
+  }
+
+  &-item {
+    margin: 50px 0;
+
+    img {
+      width: 100%;
+    }
+
+    h5 {
+      font-size: 14px;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        background-color: $black;
+        width: 10px;
+        height: 1px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// company
+.company {
+  display: flex;
+  position: relative;
+
+  @include iphone {
+    display: block;
+    padding-bottom: 0;
+  }
+
+
+  &-inner {
+    width: 60%;
+    margin: 0 auto;
+
+    @include iphone {
+      width: 95%;
+    }
+  }
+
+
+  &-wrapper {
+    width: 40%;
+    padding: 120px 80px;
+    background-color: $white;
+
+    @include iphone {
+      width: 95%;
+      padding: 50px 10px;
+    }
+  }
+
+
+  &-img {
+    position: absolute;
+    top: 150px;
+    right: 400px;
+
+    @include iphone {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+
+
+    img {
+      width: 550px;
+      height: 400px;
+      object-fit: cover;
+
+      @include iphone{
+        margin: 20px 0;
+        width: 100%;
+      }
+    }
+  }
+
+
+  table {
+    tr {
+      td {
+        font-size: 14px;
+        padding-top: 20px;
+
+        &:nth-of-type(2n) {
+          padding-left: 20px;
+        }
+
+        @include iphone {
+          display: block;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+
+footer {
+  width: 50%;
+  margin: 0 auto;
+
+  @include iphone{
+    width: 100%;
+  }
+  
+  .footer {
+    &-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 180px;
+      
+      @include iphone{
+        padding: 30px 0 20px 20px;
+        display: inline-block;
+        height: 250px;
+      }
+
+
+      .txt {
+        p {
+          line-height: 1.5;
+
+          @include iphone{
+            width: 100%;
+            padding-top: 16px;
+          }
+        }
+      }
+    }
+
+    &-img {
+      width: 10%;
+
+      @include iphone{
+        width: 25%;
+      }
+
+
+      img {
+        width: 100%;
+      }
+    }
+
+
+  }
+
+  .copy {
+    font-size: 10px;
+    padding-bottom: 20px;
+
+    @include iphone{
+      padding-left: 20px;
+      font-size: 12px;
+    }
+  }
+}
